@@ -1,0 +1,152 @@
+openapi: 3.0.0
+info:
+  title: EarlySave Api
+  description: API for retrieving and creating new saving profiles
+  version: 1.0.0
+
+servers:
+  - url: https://894ada66-0ecc-4279-9681-25f013958a57.mock.pstmn.io
+    description: Production Server
+
+paths:
+  /user/profile:
+    post:
+      summary: Retrieve User Profile
+      description: Get details of the authenticated user's profile.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserProfileRequestBody"
+            example:
+              email: "john.doe@example.com"
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              example:
+                userId: "123456"
+                fullName: "John Doe"
+                email: "john.doe@example.com"
+                savingsPlan: "Basic"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                message: "Unauthorized access"
+
+  /user/create:
+    post:
+      summary: Create a new profile with selected savings plan
+      description: Create a new profile with selected savings plan.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateUserRequestBody"
+            example:
+              email: "john.doe@example.com"
+              fullName: "John Doe"
+              savingsPlan: "Basic"
+      responses:
+        "200":
+          description: Successful response
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                message: "Unauthorized access"
+
+  /plans:
+    get:
+      summary: Retrieve List of Savings Plans
+      description: Get a list of savings plans.
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              example:
+                - savingsName: "Basic"
+                  savingsInterestRate: "3%"
+                  investmentAmount: 100
+                - savingsName: "Premium"
+                  savingsInterestRate: "5%"
+                  investmentAmount: 500
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                message: "Unauthorized access"
+
+components:
+  schemas:
+    UserProfileRequestBody:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          description: User's email address.
+
+    UserProfile:
+      type: object
+      properties:
+        userId:
+          type: string
+          description: Unique identifier for the user.
+        fullName:
+          type: string
+          description: User's full name.
+        email:
+          type: string
+          format: email
+          description: User's email address.
+        savingsPlan:
+          type: string
+          description: User's saving plan.
+
+    CreateUserRequestBody:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          description: User's email address.
+        fullName:
+          type: string
+          description: User's full name.
+        savingsPlan:
+          type: string
+          description: User's saving plan.
+
+    SavingsPlan:
+      type: object
+      properties:
+        savingsName:
+          type: string
+          description: Unique Identifier for the savings plan.
+        savingsInterestRate:
+          type: string
+          description: Interest Rate Yield
+        investmentAmount:
+          type: integer
+          description: Investment Amount
+
+    SavingsPlanList:
+      type: array
+      items:
+        $ref: "#/components/schemas/SavingsPlan"
+
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Error message.
