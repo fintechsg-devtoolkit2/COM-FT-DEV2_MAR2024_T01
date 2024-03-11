@@ -4,11 +4,11 @@ const app = express()
 
 app.use(express.json())
 app.use("/user", user.router)
-console.log("hello")
-// app.get('/', function(req, res) {
-//     res.send("Hello World")
-// }
-// )
+
+app.get('/', function(req, res) {
+    res.send(console.log("hello"))
+}
+)
 
 // app.listen(3000, (errors) => {
 //     if (errors)
