@@ -4,7 +4,7 @@ const app = express()
 
 app.use(express.json())
 app.use("/user/profile", user.router1)
-app.use("/user/create". user.router2)
+app.use("/user/create", user.router2)
 // app.get('/', function(req, res) {
 //     res.send("Hello World")
 // }
