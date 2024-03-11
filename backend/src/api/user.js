@@ -4,13 +4,13 @@ const database = require("../../database/mock_data")
 
 const router = express.Router()
 
-router.post("/user/profile", (req, res) => {
+router1.post("/user/profile", (req, res) => {
   // const users = database.get_all_users()
   res.send("View user profile")
 })
 
-router.post("/user/create", (req, res) => {
+router2.post("/user/create", (req, res) => {
   res.send("Create profile")
 })
 
-module.exports = { router }
+module.exports = { router1, router2 }
