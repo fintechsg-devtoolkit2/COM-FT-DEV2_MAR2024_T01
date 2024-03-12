@@ -34,10 +34,10 @@ function retrieveUserDetails(formData) {
 
 function submitSubscription(formData) {
   console.log(formData)
-  var fullName = $("#fullName").val(); // Get value of fullName input
-  var email = $("#email").val(); // Get value of email input
-  var savingsOption = $("input:radio[name=savingsOption]:selected").val(); // Get value of savings plan 
-  console.log("fullName: " + fullName + ", Email: " + email + ", Savings: " + savingsOption);
+  // var fullName = $("#fullName").val(); // Get value of fullName input
+  // var email = $("#email").val(); // Get value of email input
+  // var savingsOption = $("input:radio[name=savingsOption]:selected").val(); // Get value of savings plan 
+  // console.log("fullName: " + fullName + ", Email: " + email + ", Savings: " + savingsOption);
 
   var settings = {
     url: "https://fintechsg-devtoolkit2-t01.onrender.com/newSubscription",
