@@ -47,7 +47,7 @@ function submitSubscription(formData) {
       Accept: "application/json",
     },
     data: JSON.stringify(formData),
-    };
+  };
  
   $.ajax(settings)
     .done(function (response) {
@@ -66,8 +66,7 @@ function submitSubscription(formData) {
       console.log("Cleanup");
       // $("#detailsForm :input").prop("readonly", false);
       // $("#submitButton").prop("disabled", false);
-    });
-} 
+    }); 
 
   //   var myArray = [];
   //   $.ajax(settings).done(function (response) {
@@ -75,7 +74,7 @@ function submitSubscription(formData) {
   //     buildTable(myArray);
   //     console.log(myArray);
   //   });
-  event.preventDefault();
+  // event.preventDefault();
 }
 
 $(document).ready(function () {
