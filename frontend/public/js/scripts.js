@@ -68,7 +68,7 @@ $(document).ready(function () {
 
     $("#submitSuccessMessage").hide();
     $("#submitErrorMessage").hide();
-    $("#detailsForm :input").prop("disabled", true);
+    $("#detailsForm :input").prop("readonly", true);
     $("#submitButton").prop("disabled", true);
 
     var serializedData = $(this).serialize(); // Serialize form data
