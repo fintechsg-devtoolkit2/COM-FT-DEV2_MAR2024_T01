@@ -5,7 +5,7 @@ const routerSubscription = express.Router();
 // API endpoint to handle POST request with fullName, email, savingsOption
 routerSubscription.post("/", (req, res) => {
 
-return res.text("POSTresponse")
+return res.json({ Status: Success! })
 });
                         
 module.exports = { routerSubscription };
