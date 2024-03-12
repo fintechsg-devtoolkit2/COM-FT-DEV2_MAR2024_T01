@@ -93,20 +93,31 @@
               <!---->
               <!-- This is what your users will see when the form-->
               <!-- has successfully submitted-->
-              <div class="d-none" id="submitSuccessMessage">
-                <div class="text-center mb-3">
-                  <div class="fw-bolder">Form submission successful!</div>
-                  Check your
-                  <a class="nav-link" href="feature.html">Subscription</a>
+              <div id="submitSuccessMessage" style="display: none">
+                <div class="mb-3">
+                  <div class="form-container">
+                    <div class="form-field">
+                      <label for="submitSuccessName">Name:</label>
+                      <span id="submitSuccessName"></span>
+                    </div>
+                    <div class="form-field">
+                      <label for="submitSuccessEmail">Email:</label>
+                      <span id="submitSuccessEmail"></span>
+                    </div>
+                    <div class="form-field">
+                      <label for="submitSuccessPlanType">Subscription:</label>
+                      <span id="submitSuccessPlanType"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- Submit error message-->
               <!---->
               <!-- This is what your users will see when there is-->
               <!-- an error submitting the form-->
-              <div class="d-none" id="submitErrorMessage">
+              <div id="submitErrorMessage" style="display: none">
                 <div class="text-center text-danger mb-3">
-                  Error sending message!
+                  Error in retrieving
                 </div>
               </div>
               <!-- Submit Button-->

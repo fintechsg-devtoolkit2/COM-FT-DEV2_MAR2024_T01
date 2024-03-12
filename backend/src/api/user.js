@@ -28,7 +28,7 @@ router.post("/details", (req, res) => {
     id: 1,
     name: "Jane Doe",
     email: "jane@example.com",
-    planType: "premium",
+    planType: "Premium",
   };
 
   if (!user) {

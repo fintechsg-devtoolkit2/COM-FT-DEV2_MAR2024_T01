@@ -12,9 +12,24 @@ function retrieveUserDetails(formData) {
     data: JSON.stringify(formData),
   };
 
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-  });
+  $.ajax(settings)
+    .done(function (response) {
+      console.log(response);
+
+      $("#submitSuccessMessage").show();
+      $("#submitSuccessName").text(response.name);
+      $("#submitSuccessEmail").text(response.email);
+      $("#submitSuccessPlanType").text(response.planType);
+    })
+    .fail(function (xhr, status, error) {
+      console.log("Error: " + error);
+      $("#submitErrorMessage").show();
+    })
+    .always(function () {
+      console.log("Cleanup");
+      $("#detailsForm :input").prop("readonly", false);
+      $("#submitButton").prop("disabled", false);
+    });
 }
 
 function submitSubscription(event) {
@@ -50,6 +65,12 @@ $(document).ready(function () {
 
   $("#detailsForm").submit(function (e) {
     e.preventDefault(); // Prevent form submission
+
+    $("#submitSuccessMessage").hide();
+    $("#submitErrorMessage").hide();
+    $("#detailsForm :input").prop("disabled", true);
+    $("#submitButton").prop("disabled", true);
+
     var serializedData = $(this).serialize(); // Serialize form data
 
     var formData = {};
