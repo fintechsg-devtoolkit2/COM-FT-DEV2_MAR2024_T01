@@ -1,6 +1,6 @@
 const express = require("express");
 const user = require("./src/api/user");
-const subscription = require("./src/api/accounts");
+const subscription = require("./src/api/subscription");
 const app = express();
 
 var cors = require("cors");
