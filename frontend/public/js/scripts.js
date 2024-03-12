@@ -89,8 +89,8 @@ $(document).ready(function () {
       var keyValue = item.split("=");
       formData[keyValue[0]] = decodeURIComponent(keyValue[1] || "");
     });
-
-    console.log(formData);
+  
+    submitSubscription(formData);
   });
 
   $("#detailsForm").submit(function (e) {
