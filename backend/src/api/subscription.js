@@ -5,7 +5,7 @@ const routerSubscription = express.Router();
 // API endpoint to handle POST requests with email payload
 routerSubscription.post("/", (req, res) => {
 
-return res.json({ Success: "POSTresponse" })
+return res.text("POSTresponse")
 });
                         
 module.exports = { routerSubscription };
