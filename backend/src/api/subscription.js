@@ -4,7 +4,6 @@ const routerSubscription = express.Router();
 
 // API endpoint to handle POST requests with email payload
 routerSubscription.post("/", (req, res) => {
-  return console.log(req.body);
 
   // if (!email) {
   //   return res.status(400).json({ error: "Email is required" });
@@ -26,6 +25,6 @@ routerSubscription.post("/", (req, res) => {
 //   return res.json(User added);
 // });
 
-return res(console.log("POSTresponse"))
+return res.text("POSTresponse")
   
 module.exports = { routerSubscription };
