@@ -53,20 +53,16 @@ function submitSubscription(formData) {
   $.ajax(settings)
     .done(function (response) {
       console.log(response);
-
-      // $("#submitSuccessMessage").show();
-      // $("#submitSuccessName").text(response.name);
-      // $("#submitSuccessEmail").text(response.email);
-      // $("#submitSuccessPlanType").text(response.planType);
+      $("#submitSuccessMessage").show();
     })
     .fail(function (xhr, status, error) {
       console.log("Error: " + error);
-      // $("#submitErrorMessage").show();
+      $("#submitErrorMessage").show();
     })
     .always(function () {
       console.log("Cleanup");
-      // $("#detailsForm :input").prop("readonly", false);
-      // $("#submitButton").prop("disabled", false);
+      $("#subscriptionForm :input").prop("readonly", true);
+      $("#submitButton").prop("disabled", true);
     }); 
 
   //   var myArray = [];
