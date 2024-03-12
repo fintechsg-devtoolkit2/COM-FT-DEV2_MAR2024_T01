@@ -40,7 +40,7 @@ function submitSubscription(formData) {
   // console.log("fullName: " + fullName + ", Email: " + email + ", Savings: " + savingsOption);
 
   var settings = {
-    url: "https://fintechsg-devtoolkit2-t01.onrender.com/newSubscription",
+    url: "https://fintechsg-devtoolkit2-t01.onrender.com/newSubscription/",
     method: "POST",
     timeout: 0,
     headers: {
