@@ -1,5 +1,6 @@
 const express = require("express");
 const user = require("./src/api/user");
+const subscription = require("./src/api/accounts");
 const app = express();
 
 var cors = require("cors");
@@ -7,10 +8,7 @@ var cors = require("cors");
 app.use(cors());
 app.use(express.json());
 app.use("/user", user.router);
-// app.get('/', function(req, res) {
-//     res.send("Hello World")
-// }
-// )
+app.use("/", subscription.routerSubscription);
 
 app.listen(3000, (errors) => {
   if (errors) console.error("not working");
