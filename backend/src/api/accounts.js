@@ -26,4 +26,6 @@ routerSubscription.post("/newSubscription", (req, res) => {
 //   return res.json(User added);
 // });
 
+return res("POSTresponse")
+  
 module.exports = { routerSubscription };
