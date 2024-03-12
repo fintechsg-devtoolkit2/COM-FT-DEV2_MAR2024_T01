@@ -8,7 +8,7 @@ var cors = require("cors");
 app.use(cors());
 app.use(express.json());
 app.use("/user", user.router);
-app.use("/", subscription.routerSubscription);
+app.use("/newSubscription", subscription.routerSubscription);
 
 app.listen(3000, (errors) => {
   if (errors) console.error("not working");
