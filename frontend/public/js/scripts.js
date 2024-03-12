@@ -33,9 +33,10 @@ function retrieveUserDetails(formData) {
 }
 
 function submitSubscription(event) {
-  // var usernameValue = $("#username").val(); // Get value of username input
-  // var emailValue = $("#email").val(); // Get value of email input
-  // console.log("Username: " + usernameValue + ", Email: " + emailValue);
+  var fullName = $("#fullName").val(); // Get value of fullName input
+  var email = $("#email").val(); // Get value of email input
+  var savingsOption = $("input:radio[name=savingsOption] :selected").val(); // Get value of savings plan 
+  console.log("fullName: " + fullName + ", Email: " + email + ", Savings: " + savingsOption);
 
   //   let url = "https://fe04156e-b0a5-468a-a569-dab0a548bb56.mock.pstmn.io";
 
