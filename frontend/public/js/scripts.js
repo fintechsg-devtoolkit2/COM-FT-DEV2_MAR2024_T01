@@ -12,6 +12,8 @@ function retrieveUserDetails(formData) {
     data: JSON.stringify(formData),
   };
 
+  console.log("execute ajax call");
+
   $.ajax(settings)
     .done(function (response) {
       console.log(response);
@@ -19,7 +21,7 @@ function retrieveUserDetails(formData) {
       $("#submitSuccessMessage").show();
       $("#submitSuccessName").text(response.name);
       $("#submitSuccessEmail").text(response.email);
-      $("#submitSuccessPlanType").text(response.planType);
+      $("#submitSuccessPlanType").text(response.plan_type);
     })
     .fail(function (xhr, status, error) {
       console.log("Error: " + error);
@@ -33,10 +35,10 @@ function retrieveUserDetails(formData) {
 }
 
 function submitSubscription(formData) {
-  console.log(formData)
+  console.log(formData);
   // var fullName = $("#fullName").val(); // Get value of fullName input
   // var email = $("#email").val(); // Get value of email input
-  // var savingsOption = $("input:radio[name=savingsOption]:selected").val(); // Get value of savings plan 
+  // var savingsOption = $("input:radio[name=savingsOption]:selected").val(); // Get value of savings plan
   // console.log("fullName: " + fullName + ", Email: " + email + ", Savings: " + savingsOption);
 
   var settings = {
@@ -49,7 +51,7 @@ function submitSubscription(formData) {
     },
     data: JSON.stringify(formData),
   };
- 
+
   $.ajax(settings)
     .done(function (response) {
       console.log(response);
@@ -63,7 +65,7 @@ function submitSubscription(formData) {
       console.log("Cleanup");
       $("#subscriptionForm :input").prop("readonly", true);
       $("#submitButton").prop("disabled", true);
-    }); 
+    });
 
   //   var myArray = [];
   //   $.ajax(settings).done(function (response) {
@@ -85,7 +87,7 @@ $(document).ready(function () {
       var keyValue = item.split("=");
       formData[keyValue[0]] = decodeURIComponent(keyValue[1] || "");
     });
-  
+
     submitSubscription(formData);
   });
 

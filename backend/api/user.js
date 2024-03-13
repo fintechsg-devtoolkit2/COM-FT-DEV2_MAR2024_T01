@@ -5,6 +5,7 @@ const connection = require("../database");
 const router = express.Router();
 
 router.post("/details", (req, res) => {
+  console.log("endpoint details called");
   const { email } = req.body;
 
   if (!email) {
