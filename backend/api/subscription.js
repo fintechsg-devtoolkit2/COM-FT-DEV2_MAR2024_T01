@@ -1,7 +1,7 @@
 //Handle requests for subscription
 const express = require("express");
 const routerSubscription = express.Router();
-const db = require("../database");
+const connection = require("../database");
 
 // API endpoint to handle POST request with name, email, plan_type
 routerSubscription.post("/", (req, res) => {
