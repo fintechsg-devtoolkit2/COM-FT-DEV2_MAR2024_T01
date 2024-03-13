@@ -20,4 +20,4 @@ console.log("Connected to MySQL");
 }
 });
 
-module.exports = { connection }
+module.exports = { con }
