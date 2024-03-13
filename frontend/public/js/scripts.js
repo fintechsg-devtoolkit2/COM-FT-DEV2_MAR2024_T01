@@ -36,8 +36,8 @@ function submitSubscription(formData) {
   console.log(formData);
   // var name = $("#name").val(); // Get value of name input
   // var email = $("#email").val(); // Get value of email input
-  // var savingsOption = $("input:radio[name=savingsOption]:selected").val(); // Get value of savings plan
-  // console.log("name: " + name + ", Email: " + email + ", Savings: " + savingsOption);
+  // var plan_type = $("input:radio[name=plan_type]:selected").val(); // Get value of savings plan
+  // console.log("name: " + name + ", Email: " + email + ", Savings: " + plan_type);
 
   var settings = {
     url: "https://fintechsg-devtoolkit2-t01.onrender.com/newSubscription",
