@@ -12,15 +12,18 @@ router.post("/details", (req, res) => {
     return res.status(400).json({ error: "Email is required" });
   }
 
-  console.log(email);
+  // // dummy user
+  // const user = {
+  //   id: 1,
+  //   name: "Jane Doe",
+  //   email: "jane@example.com",
+  //   planType: "Premium",
+  // };
 
-  // dummy user
-  const user = {
-    id: 1,
-    name: "Jane Doe",
-    email: "jane@example.com",
-    planType: "Premium",
-  };
+  db.con.query(`SELECT * FROM b23_team1 WHERE email=${email};`, function(err, user) {
+    if (err) throw err;
+    console.log(user)
+  })
 
   if (!user) {
     return res.status(404).json({ error: "User not found" });
