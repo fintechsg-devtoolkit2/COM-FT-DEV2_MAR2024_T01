@@ -19,7 +19,7 @@ router.post("/details", (req, res) => {
   //   email: "jane@example.com",
   //   planType: "Premium",
   // };
-  db.con.query(`SELECT * FROM b23_team1 WHERE email=${email};`, function(err, user) {
+  db.con.query(`SELECT * FROM b23_team1 WHERE email='${email}';`, function(err, user) {
     if (err) throw err;
     console.log(user) 
   })
