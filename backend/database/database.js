@@ -19,3 +19,5 @@ console.log(error);
 console.log("Connected to MySQL");
 }
 });
+
+module.exports = { connection }
