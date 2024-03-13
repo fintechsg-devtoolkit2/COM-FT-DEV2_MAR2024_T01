@@ -206,13 +206,13 @@
               <div class="form-floating mb-3">
                 <input
                   class="form-control"
-                  id="fullName"
+                  id="name"
                   type="text"
-                  name="fullName"
+                  name="name"
                   placeholder="Enter your name..."
                   required
                 />
-                <label for="fullName">Full name</label>
+                <label for="name">Full name</label>
                 <div class="invalid-feedback">A name is required.</div>
               </div>
               <!-- Email address input-->
@@ -247,17 +247,28 @@
               <!---->
               <!-- This is what your users will see when the form-->
               <!-- has successfully submitted-->
-              <div class="alert alert-success" role="alert" id="submitSuccessMessage" style="display: none">
-                <div class="text-center mb-3">
+              <div
+                class="alert alert-success"
+                role="alert"
+                id="submitSuccessMessage"
+                style="display: none"
+              >
+                <div class="text-center">
                   <div class="fw-bolder">Form submission successful!</div>
-                  Check your <a class="alert-link" href="feature.html">subscription</a>
+                  Check your
+                  <a class="alert-link" href="feature.html">subscription</a>
                 </div>
               </div>
               <!-- Submit error message-->
               <!---->
               <!-- This is what your users will see when there is-->
               <!-- an error submitting the form-->
-              <div class="alert alert-danger" role="alert" id="submitErrorMessage" style="display: none">
+              <div
+                class="alert alert-danger"
+                role="alert"
+                id="submitErrorMessage"
+                style="display: none"
+              >
                 <div class="text-center text-danger mb-3">
                   Error sending message!
                 </div>

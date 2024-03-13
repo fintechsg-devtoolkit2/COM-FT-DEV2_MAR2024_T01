@@ -12,8 +12,6 @@ function retrieveUserDetails(formData) {
     data: JSON.stringify(formData),
   };
 
-  console.log("execute ajax call");
-
   $.ajax(settings)
     .done(function (response) {
       console.log(response);
@@ -24,7 +22,7 @@ function retrieveUserDetails(formData) {
       $("#submitSuccessPlanType").text(response.plan_type);
     })
     .fail(function (xhr, status, error) {
-      console.log("Error: " + error);
+      console.log(`Error - ${xhr.responseText}`);
       $("#submitErrorMessage").show();
     })
     .always(function () {
@@ -36,10 +34,10 @@ function retrieveUserDetails(formData) {
 
 function submitSubscription(formData) {
   console.log(formData);
-  // var fullName = $("#fullName").val(); // Get value of fullName input
+  // var name = $("#name").val(); // Get value of name input
   // var email = $("#email").val(); // Get value of email input
   // var savingsOption = $("input:radio[name=savingsOption]:selected").val(); // Get value of savings plan
-  // console.log("fullName: " + fullName + ", Email: " + email + ", Savings: " + savingsOption);
+  // console.log("name: " + name + ", Email: " + email + ", Savings: " + savingsOption);
 
   var settings = {
     url: "https://fintechsg-devtoolkit2-t01.onrender.com/newSubscription",

@@ -28,7 +28,7 @@ paths:
             application/json:
               example:
                 userId: "123456"
-                fullName: "John Doe"
+                name: "John Doe"
                 email: "john.doe@example.com"
                 savingsPlan: "Basic"
         "401":
@@ -50,7 +50,7 @@ paths:
               $ref: "#/components/schemas/CreateUserRequestBody"
             example:
               email: "john.doe@example.com"
-              fullName: "John Doe"
+              name: "John Doe"
               savingsPlan: "Basic"
       responses:
         "200":
@@ -101,7 +101,7 @@ components:
         userId:
           type: string
           description: Unique identifier for the user.
-        fullName:
+        name:
           type: string
           description: User's full name.
         email:
@@ -119,7 +119,7 @@ components:
           type: string
           format: email
           description: User's email address.
-        fullName:
+        name:
           type: string
           description: User's full name.
         savingsPlan:

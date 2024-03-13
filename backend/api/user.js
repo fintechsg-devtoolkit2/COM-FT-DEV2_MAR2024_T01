@@ -24,12 +24,9 @@ router.post("/details", (req, res) => {
     if (!user || user.length === 0)
       return res.status(404).json({ error: "User not found" });
 
-    extractedPlanType =
-      user[0].plan_type === 3
-        ? "Enterprise"
-        : user[0].plan_type === 2
-        ? "Premium"
-        : "Basic";
+    const planType = user[0].plan_type;
+    const extractedPlanType =
+      planType === 3 ? "Enterprise" : planType === 2 ? "Premium" : "Basic";
 
     const extractedUser = {
       ...user[0], // assuming you only want to return the first user
