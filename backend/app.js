@@ -1,10 +1,10 @@
 const express = require("express");
-const user = require("./src/api/user");
-const subscription = require("./src/api/subscription");
+const user = require("./api/user");
+const subscription = require("./api/subscription");
+
 const app = express();
 
 var cors = require("cors");
-
 app.use(cors());
 app.use(express.json());
 
