@@ -1,19 +1,19 @@
 # COM-FT-DEV2_MAR2024_T01
 
+## Project Website
+
+Visit our [project website](https://nusfintech-mar2024-t01.onrender.com) to learn more.
+
+## Project Description
+
+This repository contains the code for the COM-FT-DEV2_MAR2024_T01 project.
+
 ## Team Members
 
 - Matthew Tan Quan Sheng
 - Sim Yu Ting
 - Darren Chin Jhun Pyng
 - Ong Ying Jie
-
-## Project Description
-
-This repository contains the code for the COM-FT-DEV2_MAR2024_T01 project.
-
-## Project Website
-
-Visit our [project website](https://nusfintech-mar2024-t01.onrender.com) to learn more.
 
 ## Getting Started
 
