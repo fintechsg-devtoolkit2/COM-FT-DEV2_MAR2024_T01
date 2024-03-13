@@ -1,6 +1,7 @@
 const express = require("express");
-const user = require("./src/api/user")
-const app = express()
+const user = require("./src/api/user");
+const subscription = require("./src/api/subscription");
+const app = express();
 
 app.use(express.json())
 app.use("/user", user.router)

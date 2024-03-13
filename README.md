@@ -4,6 +4,4 @@ Team Members:
 Matthew Tan Quan Sheng
 Sim Yu Ting
 Darren Chin Jhun Pyng
-Ong Ying Jie 2
-
-testing branch
+Ong Ying Jie

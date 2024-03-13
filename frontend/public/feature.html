@@ -74,7 +74,7 @@
       <div class="container px-5 my-3 px-5">
         <div class="row gx-5 justify-content-center">
           <div class="col-lg-6">
-            <form id="subscriptionForm">
+            <form id="detailsForm">
               <!-- Email address input-->
               <div class="form-floating mb-3">
                 <input
@@ -93,20 +93,31 @@
               <!---->
               <!-- This is what your users will see when the form-->
               <!-- has successfully submitted-->
-              <div class="d-none" id="submitSuccessMessage">
-                <div class="text-center mb-3">
-                  <div class="fw-bolder">Form submission successful!</div>
-                  Check your
-                  <a class="nav-link" href="feature.html">Subscription</a>
+              <div id="submitSuccessMessage" style="display: none">
+                <div class="mb-3">
+                  <div class="form-container">
+                    <div class="form-field">
+                      <label for="submitSuccessName">Name:</label>
+                      <span id="submitSuccessName"></span>
+                    </div>
+                    <div class="form-field">
+                      <label for="submitSuccessEmail">Email:</label>
+                      <span id="submitSuccessEmail"></span>
+                    </div>
+                    <div class="form-field">
+                      <label for="submitSuccessPlanType">Subscription:</label>
+                      <span id="submitSuccessPlanType"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- Submit error message-->
               <!---->
               <!-- This is what your users will see when there is-->
               <!-- an error submitting the form-->
-              <div class="d-none" id="submitErrorMessage">
+              <div id="submitErrorMessage" style="display: none">
                 <div class="text-center text-danger mb-3">
-                  Error sending message!
+                  Error in retrieving
                 </div>
               </div>
               <!-- Submit Button-->
@@ -131,7 +142,9 @@
           <div class="col-lg-6 col-xl-4">
             <div class="card mb-5 mb-xl-0">
               <div class="card-body p-5">
-                <div class="small text-uppercase fw-bold text-muted">Basic</div>
+                <div class="small text-uppercase fw-bold">
+                  <i class="bi bi-heart-fill text-danger"></i> Basic
+                </div>
                 <div class="mb-3">
                   <span class="display-4 fw-bold">$100</span>
                   <span class="text-muted">/ mo.</span>
@@ -166,8 +179,7 @@
             <div class="card mb-5 mb-xl-0">
               <div class="card-body p-5">
                 <div class="small text-uppercase fw-bold">
-                  <i class="bi bi-star-fill text-warning"></i>
-                  Pro
+                  <i class="bi bi-star-fill text-warning"></i> Pro
                 </div>
                 <div class="mb-3">
                   <span class="display-4 fw-bold">$300</span>
@@ -202,8 +214,8 @@
           <div class="col-lg-6 col-xl-4">
             <div class="card">
               <div class="card-body p-5">
-                <div class="small text-uppercase fw-bold text-muted">
-                  Enterprise
+                <div class="small text-uppercase fw-bold">
+                  <i class="bi bi-cash text-success"></i> Enterprise
                 </div>
                 <div class="mb-3">
                   <span class="display-4 fw-bold">$1000</span>

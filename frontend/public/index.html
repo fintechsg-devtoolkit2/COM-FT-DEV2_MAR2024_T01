@@ -82,7 +82,9 @@
           <div class="col-lg-6 col-xl-4">
             <div class="card mb-5 mb-xl-0">
               <div class="card-body p-5">
-                <div class="small text-uppercase fw-bold text-muted">Basic</div>
+                <div class="small text-uppercase fw-bold">
+                  <i class="bi bi-heart-fill text-danger"></i> Basic
+                </div>
                 <div class="mb-3">
                   <span class="display-4 fw-bold">$100</span>
                   <span class="text-muted">/ mo.</span>
@@ -117,8 +119,7 @@
             <div class="card mb-5 mb-xl-0">
               <div class="card-body p-5">
                 <div class="small text-uppercase fw-bold">
-                  <i class="bi bi-star-fill text-warning"></i>
-                  Premium
+                  <i class="bi bi-star-fill text-warning"></i> Pro
                 </div>
                 <div class="mb-3">
                   <span class="display-4 fw-bold">$300</span>
@@ -153,8 +154,8 @@
           <div class="col-lg-6 col-xl-4">
             <div class="card">
               <div class="card-body p-5">
-                <div class="small text-uppercase fw-bold text-muted">
-                  Enterprise
+                <div class="small text-uppercase fw-bold">
+                  <i class="bi bi-cash text-success"></i> Enterprise
                 </div>
                 <div class="mb-3">
                   <span class="display-4 fw-bold">$1000</span>
@@ -205,13 +206,13 @@
               <div class="form-floating mb-3">
                 <input
                   class="form-control"
-                  id="name"
+                  id="fullName"
                   type="text"
-                  name="name"
+                  name="fullName"
                   placeholder="Enter your name..."
                   required
                 />
-                <label for="name">Full name</label>
+                <label for="fullName">Full name</label>
                 <div class="invalid-feedback">A name is required.</div>
               </div>
               <!-- Email address input-->
@@ -246,18 +247,17 @@
               <!---->
               <!-- This is what your users will see when the form-->
               <!-- has successfully submitted-->
-              <div class="d-none" id="submitSuccessMessage">
+              <div class="alert alert-success" role="alert" id="submitSuccessMessage" style="display: none">
                 <div class="text-center mb-3">
                   <div class="fw-bolder">Form submission successful!</div>
-                  Check your
-                  <a class="nav-link" href="feature.html">Subscription</a>
+                  Check your <a class="alert-link" href="feature.html">subscription</a>
                 </div>
               </div>
               <!-- Submit error message-->
               <!---->
               <!-- This is what your users will see when there is-->
               <!-- an error submitting the form-->
-              <div class="d-none" id="submitErrorMessage">
+              <div class="alert alert-danger" role="alert" id="submitErrorMessage" style="display: none">
                 <div class="text-center text-danger mb-3">
                   Error sending message!
                 </div>
