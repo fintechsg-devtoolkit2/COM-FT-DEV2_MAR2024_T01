@@ -20,13 +20,25 @@ router.post("/details", (req, res) => {
       return res.status(500).json({ error: "Internal Server Error" });
     }
 
-    if (!user || user.length === 0) {
-      // check if user is empty or not found
+    // check if user is empty or not found
+    if (!user || user.length === 0)
       return res.status(404).json({ error: "User not found" });
-    }
 
-    console.log(user);
-    res.json(user[0]); // assuming you only want to return the first user
+    extractedPlanType =
+      user[0].plan_type === 3
+        ? "Enterprise"
+        : user[0].plan_type === 2
+        ? "Premium"
+        : "Basic";
+
+    const extractedUser = {
+      ...user[0], // assuming you only want to return the first user
+      plan_type: extractedPlanType,
+    };
+
+    console.log(extractedUser);
+
+    res.json(extractedUser);
   });
 });
 
